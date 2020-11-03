@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA1830122546C60A00F7330F /* NodeMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1830102546C60200F7330F /* NodeMobile.framework */; };
+		BA1830132546C60A00F7330F /* NodeMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA1830102546C60200F7330F /* NodeMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA9658EF2542CF8500B7BF82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9658EE2542CF8500B7BF82 /* AppDelegate.swift */; };
+		BA9658F12542CF8500B7BF82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9658F02542CF8500B7BF82 /* SceneDelegate.swift */; };
+		BA9658F32542CF8500B7BF82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9658F22542CF8500B7BF82 /* ViewController.swift */; };
+		BA9658F62542CF8500B7BF82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9658F42542CF8500B7BF82 /* Main.storyboard */; };
+		BA9658F82542CF8700B7BF82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9658F72542CF8700B7BF82 /* Assets.xcassets */; };
+		BA9658FB2542CF8700B7BF82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9658F92542CF8700B7BF82 /* LaunchScreen.storyboard */; };
+		BA96980A2542E63100B7BF82 /* NodeRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA9698082542E63000B7BF82 /* NodeRunner.mm */; };
+		BA96980C2542E7A700B7BF82 /* JS in Resources */ = {isa = PBXBuildFile; fileRef = BA96980B2542E7A700B7BF82 /* JS */; };
+		BAD55746254BCB130036B612 /* ArweaveProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD55745254BCB130036B612 /* ArweaveProvider.swift */; };
+		BAD55749254BCB630036B612 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD55748254BCB630036B612 /* Wallet.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA9698062542E5F000B7BF82 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BA1830132546C60A00F7330F /* NodeMobile.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BA1830102546C60200F7330F /* NodeMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NodeMobile.framework; sourceTree = "<group>"; };
+		BA9658EB2542CF8500B7BF82 /* VeracityArWeave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeracityArWeave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9658EE2542CF8500B7BF82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA9658F02542CF8500B7BF82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BA9658F22542CF8500B7BF82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA9658F52542CF8500B7BF82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA9658F72542CF8700B7BF82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA9658FA2542CF8700B7BF82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA9658FC2542CF8700B7BF82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA9698072542E62F00B7BF82 /* VeracityArWeave-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VeracityArWeave-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA9698082542E63000B7BF82 /* NodeRunner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NodeRunner.mm; sourceTree = "<group>"; };
+		BA9698092542E63100B7BF82 /* NodeRunner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NodeRunner.hpp; sourceTree = "<group>"; };
+		BA96980B2542E7A700B7BF82 /* JS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JS; sourceTree = SOURCE_ROOT; };
+		BAD55745254BCB130036B612 /* ArweaveProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArweaveProvider.swift; sourceTree = "<group>"; };
+		BAD55748254BCB630036B612 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA9658E82542CF8500B7BF82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA1830122546C60A00F7330F /* NodeMobile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA9658E22542CF8500B7BF82 = {
+			isa = PBXGroup;
+			children = (
+				BA9658ED2542CF8500B7BF82 /* VeracityArWeave */,
+				BA9658EC2542CF8500B7BF82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA9658EC2542CF8500B7BF82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA9658EB2542CF8500B7BF82 /* VeracityArWeave.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA9658ED2542CF8500B7BF82 /* VeracityArWeave */ = {
+			isa = PBXGroup;
+			children = (
+				BA1830102546C60200F7330F /* NodeMobile.framework */,
+				BA96980B2542E7A700B7BF82 /* JS */,
+				BA9698092542E63100B7BF82 /* NodeRunner.hpp */,
+				BA9698082542E63000B7BF82 /* NodeRunner.mm */,
+				BA9658EE2542CF8500B7BF82 /* AppDelegate.swift */,
+				BA9658F02542CF8500B7BF82 /* SceneDelegate.swift */,
+				BA9658F22542CF8500B7BF82 /* ViewController.swift */,
+				BAD55747254BCB580036B612 /* SDK */,
+				BA9658F42542CF8500B7BF82 /* Main.storyboard */,
+				BA9658F72542CF8700B7BF82 /* Assets.xcassets */,
+				BA9658F92542CF8700B7BF82 /* LaunchScreen.storyboard */,
+				BA9658FC2542CF8700B7BF82 /* Info.plist */,
+				BA9698072542E62F00B7BF82 /* VeracityArWeave-Bridging-Header.h */,
+			);
+			path = VeracityArWeave;
+			sourceTree = "<group>";
+		};
+		BAD55747254BCB580036B612 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				BAD55745254BCB130036B612 /* ArweaveProvider.swift */,
+				BAD55748254BCB630036B612 /* Wallet.swift */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA9658EA2542CF8500B7BF82 /* VeracityArWeave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA9658FF2542CF8700B7BF82 /* Build configuration list for PBXNativeTarget "VeracityArWeave" */;
+			buildPhases = (
+				BA9658E72542CF8500B7BF82 /* Sources */,
+				BA9658E82542CF8500B7BF82 /* Frameworks */,
+				BA9658E92542CF8500B7BF82 /* Resources */,
+				BA9698062542E5F000B7BF82 /* Embed Frameworks */,
+				BA1830142546C69900F7330F /* Strip frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VeracityArWeave;
+			productName = VeracityArWeave;
+			productReference = BA9658EB2542CF8500B7BF82 /* VeracityArWeave.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA9658E32542CF8500B7BF82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					BA9658EA2542CF8500B7BF82 = {
+						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
+					};
+				};
+			};
+			buildConfigurationList = BA9658E62542CF8500B7BF82 /* Build configuration list for PBXProject "VeracityArWeave" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA9658E22542CF8500B7BF82;
+			productRefGroup = BA9658EC2542CF8500B7BF82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA9658EA2542CF8500B7BF82 /* VeracityArWeave */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA9658E92542CF8500B7BF82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA96980C2542E7A700B7BF82 /* JS in Resources */,
+				BA9658FB2542CF8700B7BF82 /* LaunchScreen.storyboard in Resources */,
+				BA9658F82542CF8700B7BF82 /* Assets.xcassets in Resources */,
+				BA9658F62542CF8500B7BF82 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA1830142546C69900F7330F /* Strip frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Strip frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\necho \"\\n ⏱ Removing Unused Architectures \\n\\n\\n\"\n\nexec > /tmp/${PROJECT_NAME}_archive.log 2>&1\n\nFRAMEWORK=\"YOUR_FRAMEWORK_NAME\"\n\nFRAMEWORK_EXECUTABLE_PATH=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\n\ndo\n\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n\ndone\n\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n\nrm \"${EXTRACTED_ARCHS[@]}\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\necho \"\\n ⏱ Removing Unused Architectures \\n\\n\\n\"\necho \"\\n\\n\\n 🏁 Completed removing unused architectures from your fat framework.\"\necho \"\\n\\n\\n 🔍 For more details please check the /tmp/${PROJECT_NAME}_archive.log file. \\n\\n\\n\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA9658E72542CF8500B7BF82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD55749254BCB630036B612 /* Wallet.swift in Sources */,
+				BA9658F32542CF8500B7BF82 /* ViewController.swift in Sources */,
+				BA96980A2542E63100B7BF82 /* NodeRunner.mm in Sources */,
+				BA9658EF2542CF8500B7BF82 /* AppDelegate.swift in Sources */,
+				BA9658F12542CF8500B7BF82 /* SceneDelegate.swift in Sources */,
+				BAD55746254BCB130036B612 /* ArweaveProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BA9658F42542CF8500B7BF82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA9658F52542CF8500B7BF82 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA9658F92542CF8700B7BF82 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA9658FA2542CF8700B7BF82 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA9658FD2542CF8700B7BF82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA9658FE2542CF8700B7BF82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA9659002542CF8700B7BF82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK54K4F58B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VeracityArWeave",
+				);
+				INFOPLIST_FILE = VeracityArWeave/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MinhChu.VeracityAr.Weave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VeracityArWeave/VeracityArWeave-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA9659012542CF8700B7BF82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK54K4F58B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VeracityArWeave",
+				);
+				INFOPLIST_FILE = VeracityArWeave/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MinhChu.VeracityAr.Weave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VeracityArWeave/VeracityArWeave-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA9658E62542CF8500B7BF82 /* Build configuration list for PBXProject "VeracityArWeave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA9658FD2542CF8700B7BF82 /* Debug */,
+				BA9658FE2542CF8700B7BF82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA9658FF2542CF8700B7BF82 /* Build configuration list for PBXNativeTarget "VeracityArWeave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA9659002542CF8700B7BF82 /* Debug */,
+				BA9659012542CF8700B7BF82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA9658E32542CF8500B7BF82 /* Project object */;
+}
