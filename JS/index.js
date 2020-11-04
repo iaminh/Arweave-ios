@@ -23,8 +23,14 @@ net
     sock.on("data", function (data) {
       console.log("uploading 1 2 3 4 5");
 
+      if (data.toString() == "generateWallet") {
+        generateWallet((wallet) => {
+          sock.write(JSON.stringify(wallet));
+        });
+        return;
+      }
+
       let json = JSON.parse(data);
-      console.log(json);
 
       uploadData(
         json,
@@ -78,8 +84,7 @@ async function generateWallet(res) {
   const address = await arweave.wallets.jwkToAddress(key);
 
   const wallet = { address: address, key: key };
-  console.log(wallet);
-  res.json(wallet);
+  res(wallet);
 }
 
 async function uploadData(body, onProgress, onCompleted, onError) {

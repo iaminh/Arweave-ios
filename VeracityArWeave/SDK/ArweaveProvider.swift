@@ -27,6 +27,7 @@ public struct UploadResponse: Codable {
 }
 
 private typealias UploadCompletion = (Result<URL, ArweaveError>) -> Void
+private typealias WalletCompletion = (Result<Wallet, ArweaveError>) -> Void
 private typealias ProgressBlock = (Int) -> Void
 
 public final class ArweaveProvider: NSObject {
@@ -38,6 +39,7 @@ public final class ArweaveProvider: NSObject {
     //(fileName:)
     private var uploadBlocks: [String: UploadCompletion] = [:]
     private var progressBlocks: [String: ProgressBlock] = [:]
+    private var walletBlock: WalletCompletion?
 
     private override init() {
         super.init()
@@ -83,6 +85,28 @@ public final class ArweaveProvider: NSObject {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.setupSocket()
+        }
+    }
+
+    public func generateWallet(result: @escaping (Result<Wallet, ArweaveError>) -> Void) {
+        if walletBlock != nil {
+            result(.failure(.generateFailed))
+            return
+        }
+
+        DispatchQueue.global().async {
+            let upData = "generateWallet".data(using: .utf8)!
+
+            upData.withUnsafeBytes { [weak self] in
+                guard let self = self else { return }
+                guard let pointer = $0.baseAddress?.assumingMemoryBound(to: UInt8.self) else {
+                    result(.failure(.generateFailed))
+                    return
+                }
+
+                self.walletBlock = result
+                self.outputStream.write(pointer, maxLength: upData.count)
+            }
         }
     }
 
@@ -187,27 +211,37 @@ extension ArweaveProvider: StreamDelegate {
 
             let data = Data(bytes: buffer, count: numberOfBytesRead)
             if let progress = try? JSONDecoder().decode(UploadResponse.self, from: data) {
-                if progress.failed {
-                    uploadBlocks[progress.fileName]?(.failure(.uploadFailed))
-                    uploadBlocks[progress.fileName] = nil
-                    progressBlocks[progress.fileName] = nil
-                    try? removeTmpFile(fileName: progress.fileName)
-                    return
-                }
-
-                progressBlocks[progress.fileName]?(progress.progress)
-
-                if progress.completed {
-                    let url = "https://arweave.net/\(progress.transactionId)/\(progress.fileName)"
-
-                    uploadBlocks[progress.fileName]?(.success(URL(string: url)!))
-
-                    uploadBlocks[progress.fileName] = nil
-                    progressBlocks[progress.fileName] = nil
-
-                    try? removeTmpFile(fileName: progress.fileName)
-                }
+                self.processUpload(progress: progress)
+                return
             }
+
+            if let wallet = try? JSONDecoder().decode(Wallet.self, from: data) {
+                walletBlock?(.success(wallet))
+                walletBlock = nil
+            }
+        }
+    }
+
+    private func processUpload(progress: UploadResponse) {
+        if progress.failed {
+            uploadBlocks[progress.fileName]?(.failure(.uploadFailed))
+            uploadBlocks[progress.fileName] = nil
+            progressBlocks[progress.fileName] = nil
+            try? removeTmpFile(fileName: progress.fileName)
+            return
+        }
+
+        progressBlocks[progress.fileName]?(progress.progress)
+
+        if progress.completed {
+            let url = "https://arweave.net/\(progress.transactionId)/\(progress.fileName)"
+
+            uploadBlocks[progress.fileName]?(.success(URL(string: url)!))
+
+            uploadBlocks[progress.fileName] = nil
+            progressBlocks[progress.fileName] = nil
+
+            try? removeTmpFile(fileName: progress.fileName)
         }
     }
 }
